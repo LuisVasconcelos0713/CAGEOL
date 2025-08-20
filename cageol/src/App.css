@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&family=Sora:wght@100..800&family=Poppins:wght@100..900&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-backgroundPrimary: #F4F1EA;
+  --color-textPrimary:#442D1C;
+  --color-button: #76461B;
+  --color-backgroundSecondary: #442D1C;
+  --color-textSecondary: #F4F1EA;
+  --color-textGeneral: #584738;
+
+  --font-merriweather: "Merriweather", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-sora: "Sora", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --breakpoint-md: 830px;
+  --breakpoint-lg: 1475px;
+
+}
+
+body{
+  background-color: #F4F1EA;
+}
