@@ -65,9 +65,6 @@ const NavbarItens = () => {
       <NavLink to="/formularios" style={({ isActive }) => (isActive ? activeStyle : undefined)} className="text-textPrimary hover:text-button transition-colors">
         Formulários
       </NavLink>
-      <NavLink to="/estagios" style={({ isActive }) => (isActive ? activeStyle : undefined)} className="text-textPrimary hover:text-button transition-colors">
-        Estágios
-      </NavLink>
     </nav>
   );
 };

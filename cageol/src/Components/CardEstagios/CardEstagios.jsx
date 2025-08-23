@@ -7,7 +7,7 @@ const CardEstagios = ({ empresa, area, descricao, contato }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="bg-[var(--color-backgroundPrimary)] text-[var(--color-textPrimary)] border border-[var(--color-textGeneral)] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-[354px] w-full"
+      className="bg-[var(--color-backgroundPrimary)] text-[var(--color-textPrimary)] border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-[354px] w-full"
     >
       <h2 className="text-2xl font-semibold mb-1">{empresa}</h2>
 

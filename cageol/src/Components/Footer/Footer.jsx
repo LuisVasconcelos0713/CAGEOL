@@ -30,13 +30,13 @@ const Footer = () => {
             {/* RECOMMENDATION: Apply 'font-roxborough' or your chosen heading font class here. */}
             <h3 className="font-semibold text-lg mb-4 tracking-wider">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><Link to="/sobre" className="hover:text-white transition-colors duration-300">Sobre o C.A.</Link></li>
               <li><Link to="/lojinha-do-ca" className="hover:text-white transition-colors duration-300">Lojinha do C.A</Link></li>
-              <li><Link to="/eventos" className="hover:text-white transition-colors duration-300">Eventos</Link></li>
+              <li><Link to="/formularios" className="hover:text-white transition-colors duration-300">Formulários</Link></li>
+              <li><Link to="/semana-da-geologia" className="hover:text-white transition-colors duration-300">Semana da geologia</Link></li>
+              <li><Link to="/eventos-escolares" className="hover:text-white transition-colors duration-300">Eventos Escolares</Link></li>
               <li><Link to="/transparencia" className="hover:text-white transition-colors duration-300">Transparência</Link></li>
               <li><Link to="/informes" className="hover:text-white transition-colors duration-300">Informes</Link></li>
-              <li><Link to="/formularios" className="hover:text-white transition-colors duration-300">Formulários</Link></li>
-              <li><Link to="/estagios" className="hover:text-white transition-colors duration-300">Estágios</Link></li>
+              <li><Link to="/arquivos" className="hover:text-white transition-colors duration-300">Arquivos</Link></li>
             </ul>
           </div>
 

@@ -1,6 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router";
-import { motion } from "framer-motion";
 const sobreImageUrl =
   "https://images.unsplash.com/photo-1741639309920-451e9a913d06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const AboutCASection = () => {

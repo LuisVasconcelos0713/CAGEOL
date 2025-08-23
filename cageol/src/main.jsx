@@ -24,7 +24,6 @@ createRoot(document.getElementById("root")).render(
       <Route path="/eventos-escolares" element={<EventosEscolaresPage />}></Route>
       <Route path="/formularios" element={<Formulario/>}></Route>
       <Route path="/formularios" element={<Formulario/>}></Route>
-      <Route path="estagios" element={<Estagios/>}></Route>
       <Route path="*" element={<NotFoundPage />}></Route>
     </Routes>
     <Footer />

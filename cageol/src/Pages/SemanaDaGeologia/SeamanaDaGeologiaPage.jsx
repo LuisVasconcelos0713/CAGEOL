@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { FiCamera } from "react-icons/fi";
-import { motion } from "framer-motion"; // Importe o motion do framer-motion
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
 

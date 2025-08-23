@@ -28,9 +28,9 @@ const Estagios = () => {
       <HeaderText
         title={"Estágios"}
         subtitle={"Encontre aqui as vagas de estágios disponíveis!"}
-        background={true}
+        background={false}
       ></HeaderText>
-      <div className="flex flex-wrap gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div className="flex flex-wrap items-center justify-center gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {estagios.length >= 0 ? (
           estagios.map((estagio) => (
             <CardEstagios

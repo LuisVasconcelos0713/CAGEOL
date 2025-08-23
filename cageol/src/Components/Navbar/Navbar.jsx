@@ -35,15 +35,14 @@ const Navbar = () => {
       {/* Menu Móvel */}
       {isOpen && (
         <div className="md:hidden bg-[#F4F1EA] pb-4">
-          <nav className="flex flex-col items-center space-y-4 font-medium">
+          <nav className="flex flex-col items-center space-y-4 font-medium mt-7">
             <NavLink to="/lojinha-do-ca" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Lojinha do C.A</NavLink>
+            <NavLink to="/formularios" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Formulários</NavLink>
             <NavLink to="/semana-da-geologia" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Semana da Geologia</NavLink>
             <NavLink to="/eventos-escolares" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Eventos Escolares</NavLink>
             <NavLink to="/transparencia" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Transparência</NavLink>
             <NavLink to="/informes" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Informes</NavLink>
             <NavLink to="/arquivos" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Arquivos</NavLink>
-            <NavLink to="/formularios" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Formulários</NavLink>
-            <NavLink to="/estagios" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Estágios</NavLink>
           </nav>
         </div>
       )}
