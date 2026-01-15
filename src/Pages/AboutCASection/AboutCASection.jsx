@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 
 
   const AboutCASection = () => {

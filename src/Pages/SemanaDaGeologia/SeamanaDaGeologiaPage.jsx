@@ -4,7 +4,7 @@ import { FiCamera } from "react-icons/fi";
 import { motion } from "framer-motion"; // Importe o motion do framer-motion
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 
 const SemanaDaGeologiaPage = () => {
     const { BASE_URL } = useContext(AppContext)

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 
 const EventosEscolaresPage = () => {
   const { BASE_URL } = useContext(AppContext)

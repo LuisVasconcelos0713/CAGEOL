@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import HeaderText from "../../Components/HeaderText/HeaderText";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 import axios from "axios";
 import FinanceiroItens from "./FinanceiroItens";
 

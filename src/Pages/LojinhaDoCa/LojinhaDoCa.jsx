@@ -3,7 +3,7 @@ import CardItemLojinha from "../../Components/CardItemLojinha/CardItemLojinha";
 import axios from "axios";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 const VENDEDOR_WHATSAPP = "5562998072555"; // <-- TROQUE PELO SEU NÚMERO
 
 
