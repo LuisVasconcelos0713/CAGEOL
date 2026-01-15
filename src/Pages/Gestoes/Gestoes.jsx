@@ -54,6 +54,9 @@ const Gestoes = () => {
           chapa={dataHeader.ChapaNome}
           description={dataHeader.Descricao}
           year={dataHeader.Ano}
+          achievements={dataHeader.Realizacoes}
+          achievementsText={dataHeader.RealizacoesTexto}
+          closignPhrase={dataHeader.FraseFinalizacao}
         >
           {dataForm
             .filter((data) => Number(data.Ano) === Number(dataHeader.Ano))
