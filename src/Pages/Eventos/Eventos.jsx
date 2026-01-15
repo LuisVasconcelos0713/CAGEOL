@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
 import FormularioCard from "../../Components/FormularioCard/FormularioCard";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 
 const Eventos = () => {
   const {BASE_URL} = useContext(AppContext)
