@@ -3,7 +3,7 @@ import CardEstagios from "../../Components/CardEstagios/CardEstagios";
 import GeneralContainer from "../../Components/GeneralContainer/GeneralContainer";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
-import { AppContext } from "../../Context/Appcontext";
+import { AppContext } from "../../Context/AppContext";
 
 const Estagios = () => {
   const { BASE_URL } = useContext(AppContext)
