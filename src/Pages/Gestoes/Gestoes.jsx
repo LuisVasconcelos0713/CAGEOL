@@ -41,7 +41,7 @@ const Gestoes = () => {
   return (
     <div>
       <HeaderText
-        title="Gestoes"
+        title="Gestões"
         subtitle="Econtre aqui todas as Gestões do CAGEOL!"
         background={true}
       />

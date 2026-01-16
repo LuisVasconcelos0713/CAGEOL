@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavLink to="/lojinha-do-ca" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Lojinha</NavLink>
             <NavLink to="/eventos" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Eventos</NavLink>
             <NavLink to="/formularios-curso" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Curso - Formulario</NavLink>
-            <NavLink to="/financeiro" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">financeiro</NavLink>
+            <NavLink to="/financeiro" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Financeiro</NavLink>
             <NavLink to="/atas-de-reuniao" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Atas de reuniões</NavLink>
             <NavLink to="/semana-da-geologia" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Semana da geologia</NavLink>
             <NavLink to="/eventos-escolares" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Eventos escolares</NavLink>
