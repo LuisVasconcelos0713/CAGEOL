@@ -94,7 +94,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:underline hover:text-gray-200 transition-colors"
               >
-                Luis Gustavo Vasconcelos
+                Luis Gustavo Vasconcelos - Vascore
               </a>
             </p>
         </div>
