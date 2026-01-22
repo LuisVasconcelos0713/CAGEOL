@@ -67,7 +67,7 @@ const HeroSection = () => {
             Eventos
           </Link>
           <Link
-            to="/estagios"
+            to="/guia-do-estudante"
             className="bg-transparent border-2 border-backgroundPrimary text-backgroundPrimary hover:bg-backgroundPrimary hover:text-textPrimary font-semibold py-3 px-8 rounded-md shadow-lg transition-all"
           >
             Guia do Estudante

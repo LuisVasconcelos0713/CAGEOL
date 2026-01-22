@@ -1,247 +1,233 @@
 import HeaderText from "../../Components/HeaderText/HeaderText";
+import { ArrowRight, Info, Bus, GraduationCap, MapPin, Mail, Wallet, Utensils } from "lucide-react"; // Opcional: ícones para dar vida ao design
 
 const GuiadoEstudante = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#FCF9F6]">
       <HeaderText
         title="Guia do Estudante"
         subtitle="Informações essenciais para quem está iniciando no curso de Geologia da UFG"
         background={true}
       />
 
-      <main className="max-w-5xl mx-auto px-6 py-20 space-y-24 text-gray-700">
+      <main className="max-w-5xl mx-auto px-6 py-20 flex flex-col gap-24 text-stone-700">
 
-    {/* INTRODUÇÃO */}
-    <section className="space-y-6">
-        <h2 className="text-4xl font-bold text-textGeneral">
-        Entrei na faculdade, e agora?
-        </h2>
+        {/* INTRODUÇÃO */}
+        <section className="relative">
+          <div className="absolute -left-4 top-0 w-1 h-full bg-[#8B5E3C] rounded-full hidden md:block" />
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">
+              Entrei na faculdade, <br />
+              <span className="text-[#8B5E3C]">e agora?</span>
+            </h2>
+            <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-stone-600">
+              <p>
+                Bem-vindo(a) ao curso de <strong>Geologia na UFG</strong>! Você agora faz parte de uma comunidade que explora a história e os mistérios do nosso planeta.
+              </p>
+              <p>
+                As aulas começam no dia <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">06 de março</span>. Prepare-se para uma jornada de vivências práticas únicas e desafios intelectuais.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <p className="text-lg leading-relaxed">
-        Bem-vindo(a) ao curso de Geologia na Universidade Federal de Goiás (UFG)!
-        Parabéns pela conquista! Você agora faz parte de uma das melhores
-        universidades do país e de um curso fascinante que explora os mistérios
-        do nosso planeta.
-        </p>
+        {/* SUMÁRIO */}
+        <section className="border-l-4 border-[#8B5E3C] bg-stone-100 p-8 rounded-r-2xl shadow-sm">
+          <h3 className="text-2xl font-bold text-[#5C4033] mb-4">
+            Navegue pelo Guia
+          </h3>
 
-        <p className="text-lg leading-relaxed">
-        Este manual será seu guia inicial na universidade e no curso de Geologia.
-        As aulas começam no dia <strong>06 de março</strong>, marcando o início de
-        uma jornada cheia de desafios e realizações, com conteúdos incríveis e
-        vivências práticas únicas.
-        </p>
+          <ul className="flex flex-col gap-3 text-lg">
+            <li>
+              <a href="#matricula" className="flex items-center gap-2 hover:translate-x-2 transition-transform hover:text-[#8B5E3C]">
+                <ArrowRight className="w-5 h-5" /> Matrícula
+              </a>
+            </li>
+            <li>
+              <a href="#sigaa" className="flex items-center gap-2 hover:translate-x-2 transition-transform hover:text-[#8B5E3C]">
+                <ArrowRight className="w-5 h-5" /> SIGAA
+              </a>
+            </li>
+            <li>
+              <a href="#beneficios" className="flex items-center gap-2 hover:translate-x-2 transition-transform hover:text-[#8B5E3C]">
+                <ArrowRight className="w-5 h-5" /> Benefícios e serviços
+              </a>
+            </li>
+          </ul>
+        </section>
 
-        <p className="text-lg leading-relaxed">
-        Lembre-se: o respeito mútuo é essencial para uma convivência harmoniosa.
-        Juntos, construiremos um ambiente acolhedor e inclusivo.
-        </p>
+        {/* MATRÍCULA */}
+        <section id="matricula" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
+          <h2 className="text-3xl font-bold text-[#5C4033] flex items-center gap-3">
+            <GraduationCap className="text-[#8B5E3C]" /> Conquistei minha vaga. Qual o próximo passo?
+          </h2>
 
-        <p className="text-lg font-medium">
-        Mais uma vez, parabéns e bem-vindo(a) ao curso de Geologia na UFG!
-        </p>
-    </section>
+          <h3 className="text-2xl font-semibold text-stone-800">
+            Matrícula
+          </h3>
 
-    {/* SUMÁRIO */}
-    <section className="border-l-4 border-button pl-6">
-    <h3 className="text-2xl font-bold text-textGeneral mb-4">
-        Navegue pelo Guia
-    </h3>
-
-    <ul className="space-y-3 text-lg">
-        <li>
-        <a
-            href="#matricula"
-            className="hover:underline hover:text-button transition-colors"
-        >
-            → Matrícula
-        </a>
-        </li>
-
-        <li>
-        <a
-            href="#sigaa"
-            className="hover:underline hover:text-button transition-colors"
-        >
-            → SIGAA
-        </a>
-        </li>
-
-        <li>
-        <a
-            href="#beneficios"
-            className="hover:underline hover:text-button transition-colors"
-        >
-            → Benefícios e serviços
-        </a>
-        </li>
-    </ul>
-    </section>
-
-    {/* MATRÍCULA */}
-    <section id="matricula" className="space-y-6">
-        <h2 className="text-3xl font-bold text-textGeneral">
-        Conquistei minha vaga. Qual o próximo passo?
-        </h2>
-
-        <h3 className="text-2xl font-semibold">
-        Matrícula
-        </h3>
-
-        <p className="text-lg leading-relaxed">
-        O vínculo do candidato com a Universidade é formalizado por meio da
-        matrícula. Essa etapa é obrigatória para os calouros e deve ser realizada
-        conforme os documentos exigidos no edital, de acordo com o grupo pelo qual
-        o estudante se inscreveu no processo seletivo.
-        </p>
-
-        <p className="text-lg leading-relaxed">
-        É fundamental acompanhar os prazos divulgados pela universidade, pois a
-        não realização da matrícula dentro do período estipulado pode resultar na
-        perda da vaga.
-        </p>
-    </section>
-
-    {/* SIGAA */}
-    <section id="sigaa" className="space-y-6">
-        <h3 className="text-2xl font-semibold">
-        SIGAA
-        </h3>
-
-        <p className="text-lg leading-relaxed">
-        Após obter o número de matrícula, o estudante deve realizar o autocadastro
-        no SIGAA e aguardar o início das aulas. No primeiro semestre, a matrícula
-        nas disciplinas é feita pelas unidades acadêmicas.
-        </p>
-
-        <p className="text-lg leading-relaxed">
-        A partir do segundo semestre, o estudante deve acompanhar o calendário
-        acadêmico e realizar sua matrícula diretamente no sistema.
-        </p>
-
-        <p className="text-lg leading-relaxed">
-        Guarde seu usuário e senha, pois eles serão utilizados ao longo de toda a
-        trajetória acadêmica.
-        </p>
-
-        <a
-        href="https://bioparasitohospedeiro.iptsp.ufg.br/p/38289-orientacao-para-cadastro-no-sigaa-e-matricula-online"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block font-semibold text-button hover:underline"
-        >
-        Acessar o SIGAA
-        </a>
-    </section>
-
-    {/* BENEFÍCIOS */}
-    <section id="beneficios" className="space-y-12">
-  <h2 className="text-3xl font-bold text-textGeneral">
-    O que a UFG tem para me oferecer?
-  </h2>
-
-  <div className="grid gap-8">
-
-    {/* CARD PADRÃO */}
-    {[
-      {
-        title: "E-mail institucional",
-        content: (
           <p className="text-lg leading-relaxed">
-            O aluno pode solicitar a criação do e-mail institucional acessando o
-            SIGAA, concordando com o termo de uso e aguardando a liberação, que
-            ocorre em até 24 horas.
+            O vínculo do candidato com a Universidade é formalizado por meio da
+            matrícula. Essa etapa é obrigatória para os calouros e deve ser realizada
+            conforme os documentos exigidos no edital, de acordo com o grupo pelo qual
+            o estudante se inscreveu no processo seletivo.
           </p>
-        )
-      },
-      {
-        title: "Passe Livre Estudantil",
-        content: (
+
           <p className="text-lg leading-relaxed">
-            O benefício pode ser solicitado pelo site do{" "}
-            <a
-              href="https://www.juventude.go.gov.br/"
-              className="underline font-medium"
-            >
-              SITPASS
-            </a>.
+            É fundamental acompanhar os prazos divulgados pela universidade, pois a
+            não realização da matrícula dentro do período estipulado pode resultar na
+            perda da vaga.
           </p>
-        )
-      },
-      {
-        title: "Restaurante Universitário",
-        content: (
-          <p className="text-lg leading-relaxed">
-            O RU oferece café da manhã (R$ 2,50), almoço (R$ 4,00) e jantar
-            (R$ 4,00). No campus de Aparecida são servidos café e almoço.
-            Estudantes com bolsa de isenção não pagam.
-          </p>
-        )
-      },
-      {
-        title: "Bolsas e auxílios",
-        content: (
-          <>
-            <p className="text-lg leading-relaxed">
-              Bolsa Moradia, Casa do Estudante Universitário (CEU), Alimentação e
-              Bolsa Acolhe.
+        </section>
+
+        {/* SIGAA */}
+        <section id="sigaa" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
+          <h3 className="text-3xl font-bold text-[#5C4033]">
+            SIGAA
+          </h3>
+
+          <div className="flex flex-col gap-4 text-lg leading-relaxed">
+            <p>
+              Após obter o número de matrícula, o estudante deve realizar o autocadastro
+              no SIGAA e aguardar o início das aulas. No primeiro semestre, a matrícula
+              nas disciplinas é feita pelas unidades acadêmicas.
             </p>
+            <p>
+              A partir do segundo semestre, o estudante deve acompanhar o calendário
+              acadêmico e realizar sua matrícula diretamente no sistema.
+            </p>
+            <p className="bg-[#DDB892]/20 p-4 rounded-xl border-l-4 border-[#DDB892]">
+              Guarde seu usuário e senha, pois eles serão utilizados ao longo de toda a
+              trajetória acadêmica.
+            </p>
+          </div>
 
-            <a
-              href="https://prae.ufg.br/p/29469-programas-e-bolsas"
-              className="inline-block mt-2 font-semibold text-button hover:underline"
-            >
-              Ver todas as bolsas disponíveis
-            </a>
-          </>
-        )
-      }
-    ].map((item, index) => (
-      <div
-        key={index}
-        className="bg-white border border-gray-200 rounded-2xl p-6 space-y-3 shadow-sm"
-      >
-        <h4 className="text-xl font-semibold">{item.title}</h4>
-        {item.content}
-      </div>
-    ))}
+          <a
+            href="https://bioparasitohospedeiro.iptsp.ufg.br/p/38289-orientacao-para-cadastro-no-sigaa-e-matricula-online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit px-8 py-3 bg-[#8B5E3C] text-white font-bold rounded-full hover:bg-[#5C4033] transition-colors shadow-md"
+          >
+            Acessar o SIGAA
+          </a>
+        </section>
 
-    {/* TRANSPORTE – MESMO CARD, SÓ COM DESTAQUE SUAVE */}
-    <div className="bg-white text-gray-800 rounded-2xl p-6 space-y-4 shadow-md">
-      <h4 className="text-xl font-semibold">Transporte</h4>
+        {/* BENEFÍCIOS */}
+        <section id="beneficios" className="flex flex-col gap-10">
+          <h2 className="text-3xl font-bold text-[#5C4033]">
+            O que a UFG tem para me oferecer?
+          </h2>
 
-      <a
-        href="https://www.rmtcgoiania.com.br/linhas-e-trajetos/area-sul/?buscar=555"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline font-medium"
-      >
-        Linha 555 – Campus Aparecida de Goiânia
-      </a>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-wrap gap-6">
+              {/* CARD: E-mail institucional */}
+              <div className="flex-1 xxsm:min-w-[300px] bg-white border border-stone-200 rounded-3xl p-8 shadow-sm flex gap-4">
+                <div className="bg-stone-100 p-3 h-fit rounded-xl">
+                  <Mail className="text-[#8B5E3C] w-6 h-6" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-xl font-bold text-[#5C4033]">E-mail institucional</h4>
+                  <p className="text-lg leading-relaxed">
+                    O aluno pode solicitar a criação do e-mail institucional acessando o
+                    SIGAA, concordando com o termo de uso e aguardando a liberação, que
+                    ocorre em até 24 horas.
+                  </p>
+                </div>
+              </div>
 
-      <p className="opacity-90">
-        Trajeto: <strong>Terminal Araguaia → UFG FCT Aparecida</strong>
-      </p>
+              {/* CARD: Passe Livre Estudantil */}
+              <div className="flex-1 xxsm:min-w-[300px] bg-white border border-stone-200 rounded-3xl p-8 shadow-sm flex gap-4">
+                <div className="bg-stone-100 p-3 h-fit rounded-xl">
+                  <Wallet className="text-[#8B5E3C] w-6 h-6" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-xl font-bold text-[#5C4033]">Passe Livre Estudantil</h4>
+                  <p className="text-lg leading-relaxed">
+                    O benefício pode ser solicitado pelo site do{" "}
+                    <a href="https://www.juventude.go.gov.br/" className="underline font-bold text-[#8B5E3C]">
+                      SITPASS
+                    </a>.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-      <div className="bg-[#5C4033] text-white rounded-xl p-4">
-        <h5 className="font-semibold text-base mb-3">Horários</h5>
+            <div className="flex flex-wrap gap-6">
+              {/* CARD: Restaurante Universitário */}
+              <div className="flex-1 xxsm:min-w-[300px] bg-white border border-stone-200 rounded-3xl p-8 shadow-sm flex gap-4">
+                <div className="bg-stone-100 p-3 h-fit rounded-xl">
+                  <Utensils className="text-[#8B5E3C] w-6 h-6" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-xl font-bold text-[#5C4033]">Restaurante Universitário</h4>
+                  <p className="text-lg leading-relaxed">
+                    O RU oferece café da manhã (R$ 2,50), almoço (R$ 4,00) e jantar
+                    (R$ 4,00). No campus de Aparecida são servidos café e almoço.
+                    Estudantes com bolsa de isenção não pagam.
+                  </p>
+                </div>
+              </div>
 
-        <ul className="text-base font-semibold">
-          <li>07h19 → 07h55</li>
-          <li>09h22 → 09h55</li>
-          <li>11h42 → 12h10</li>
-          <li>12h37 → 13h05</li>
-          <li>14h21 → 15h10</li>
-          <li>16h38 → 17h10</li>
-          <li>17h37 → 18h10</li>
-        </ul>
-      </div>
-    </div>
+              {/* CARD: Bolsas e auxílios */}
+              <div className="flex-1 xxsm:min-w-[300px] bg-white border border-stone-200 rounded-3xl p-8 shadow-sm flex gap-4">
+                <div className="bg-stone-100 p-3 h-fit rounded-xl">
+                  <GraduationCap className="text-[#8B5E3C] w-6 h-6" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-xl font-bold text-[#5C4033]">Bolsas e auxílios</h4>
+                  <p className="text-lg leading-relaxed">
+                    Bolsa Moradia, Casa do Estudante Universitário (CEU), Alimentação e
+                    Bolsa Acolhe.
+                  </p>
+                  <a href="https://prae.ufg.br/p/29469-programas-e-bolsas" className="inline-block font-bold text-[#8B5E3C] hover:underline">
+                    Ver todas as bolsas disponíveis →
+                  </a>
+                </div>
+              </div>
+            </div>
 
-  </div>
-</section>
+            {/* TRANSPORTE */}
+            <div className="w-full bg-[#3C2F2F] text-stone-100 rounded-[2rem] p-8 md:p-12 shadow-xl flex flex-col md:flex-row gap-8 overflow-hidden relative">
+              <div className="flex-1 flex flex-col gap-6 relative z-10">
+                <div className="flex items-center gap-3 text-[#DDB892]">
+                  <Bus className="w-8 h-8" />
+                  <h4 className="text-3xl font-bold text-white">Transporte</h4>
+                </div>
 
-    </main>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="https://www.rmtcgoiania.com.br/linhas-e-trajetos/area-sul/?buscar=555"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl underline font-medium text-[#DDB892] hover:text-white transition-colors"
+                  >
+                    Linha 555 – Campus Aparecida de Goiânia
+                  </a>
+                  <p className="opacity-90 text-lg leading-relaxed">
+                    Trajeto: <strong>Terminal Araguaia → UFG FCT Aparecida</strong>
+                  </p>
+                </div>
+              </div>
 
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 sml:min-w-[280px] relative z-10">
+                <h5 className="font-bold text-[#DDB892] text-lg mb-4 border-b border-white/10 pb-2 flex items-center gap-2">
+                  Horários de Saída
+                </h5>
+                <ul className="flex flex-col flex-wrap xxms:w-90  sml:h-40 gap-2 font-mono text-base">
+                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>07h19</span> <span>→ 07h55</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>09h22</span> <span>→ 09h55</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>11h42</span> <span>→ 12h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>12h37</span> <span>→ 13h05</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 gap-3"><span>14h21</span> <span>→ 15h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 gap-3"><span>16h38</span> <span>→ 17h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 "><span>17h37</span> <span>→ 18h10</span></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
