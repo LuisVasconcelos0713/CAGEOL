@@ -57,7 +57,7 @@ const HeroSection = () => {
           Seu portal para eventos, informações e tudo sobre o curso de Geologia na Universidade Federal de Goiás.
         </motion.p>
         <motion.div
-          className="flex justify-center gap-4"
+          className="flex flex-col xsm:flex-row justify-center gap-4"
           variants={itemVariants}
         >
           <Link

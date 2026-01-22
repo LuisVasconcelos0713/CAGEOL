@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Menu Móvel */}
       {isOpen && (
         <div className="md:hidden bg-[#F4F1EA] pb-4">
-          <nav className="flex flex-col items-center space-y-4 font-medium mt-7 flex-wrap h-60">
+          <nav className="flex flex-col items-center space-y-4 font-medium mt-7 flex-wrap xxsm:h-60 h-full">
             <NavLink to="/contato" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Contato</NavLink>
             <NavLink to="/gestoes" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Gestões</NavLink>
             <NavLink to="/lojinha-do-ca" onClick={() => setIsOpen(false)} className="text-[#442D1C] hover:text-[#84592B]">Lojinha</NavLink>

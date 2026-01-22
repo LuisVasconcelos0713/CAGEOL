@@ -13,6 +13,8 @@
   --font-sora: "Sora", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 
+  --breakpoint-xxsm: 320px;
+  --breakpoint-xsm: 369px;
   --breakpoint-md: 830px;
   --breakpoint-lg: 1475px;
 
