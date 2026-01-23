@@ -3,49 +3,80 @@ import HeaderText from "../../Components/HeaderText/HeaderText";
 import { AppContext } from "../../Context/AppContext";
 import axios from "axios";
 import FinanceiroItens from "./FinanceiroItens";
+import { FileStack } from "lucide-react";
 
 const Financeiro = () => {
-  const {BASE_URL} = useContext(AppContext)
-  const [form,SetForm] = useState([])
+  const { BASE_URL } = useContext(AppContext);
+  const [form, setForm] = useState([]);
 
   const getFormData = async () => {
-    axios.get(`${BASE_URL}/Financeiro`).then(res => SetForm(res.data))
-  }
+    try {
+      const res = await axios.get(`${BASE_URL}/Financeiro`);
+      setForm(res.data);
+    } catch (error) {
+      console.error("Erro ao buscar dados:", error);
+    }
+  };
 
   useEffect(() => {
-    getFormData()
-  },[])
+    getFormData();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-[#F4F1EA] text-[#442D1C]">
-      <HeaderText title={"Financeiro"} subtitle={"Aqui você encontra todas as informações financeiras e administrativas da nossa instituição de forma clara e acessível."} background={true}></HeaderText>
-      <div className="max-w-5xl mx-auto font-semibold">
-        
-        <section className="mt-2">
-          <h2 className="text-2xl font-semibold text-[#442D1C] mb-2 mt-12">
-              Relatórios Semestrais - CAGEOL
-          </h2>
-          {form.map((data) => (
-            <FinanceiroItens Titulo={data.TituloRSemestral} Link={data.LinkPDFSemestral}></FinanceiroItens>  
-          ))}
-        </section>
+    <div className="min-h-screen bg-[#FDFCF9] text-[#442D1C] pb-20">
+      <HeaderText 
+        title="Financeiro" 
+        subtitle="Transparência e clareza na gestão administrativa da nossa instituição." 
+        background={true} 
+      />
 
-        <section className="mt-8">
-          <h2 className="text-2xl font-semibold text-[#442D1C] mb-2">
-            Relatório de Gastos - Eventos
-          </h2>
-          {form.map((data) => (
-            <FinanceiroItens Titulo={data.TituloREventos} Link={data.LinkPDFEventos}></FinanceiroItens>
-          ))}
-        </section>
+      <main className="max-w-5xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+          
+          {/* Seção 1 */}
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-8 w-1.5 bg-[#76461B] rounded-full" />
+              <h2 className="text-2xl font-bold tracking-tight">Relatórios Semestrais</h2>
+            </div>
+            <div className="space-y-1">
+              {form.map((data, index) => (
+                <FinanceiroItens 
+                  key={index}
+                  Titulo={data.TituloRSemestral} 
+                  Link={data.LinkPDFSemestral} 
+                />
+              ))}
+            </div>
+          </section>
 
-        <section className="mt-12">
-          <button className="bg-[#76461B] text-[#F4F1EA] px-6 py-3 rounded-lg shadow hover:brightness-120 hover:cursor-pointer transition">
+          {/* Seção 2 */}
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-8 w-1.5 bg-[#C4A484] rounded-full" />
+              <h2 className="text-2xl font-bold tracking-tight">Gastos de Eventos</h2>
+            </div>
+            <div className="space-y-1">
+              {form.map((data, index) => (
+                <FinanceiroItens 
+                  key={index}
+                  Titulo={data.TituloREventos} 
+                  Link={data.LinkPDFEventos} 
+                />
+              ))}
+            </div>
+          </section>
+
+        </div>
+
+        {/* Botão de Ação Inferior */}
+        <section className="mt-20 flex justify-center">
+          <button className="flex items-center gap-3 bg-[#76461B] text-[#F4F1EA] px-8 py-4 rounded-2xl font-bold shadow-lg shadow-[#76461B]/20 hover:bg-[#5a3514] hover:-translate-y-1 transition-all duration-300">
+            <FileStack size={20} />
             Ver todos os documentos
           </button>
         </section>
-
-      </div>
+      </main>
     </div>
   );
 };

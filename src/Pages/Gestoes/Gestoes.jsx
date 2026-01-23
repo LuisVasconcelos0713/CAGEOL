@@ -23,6 +23,7 @@ const Gestoes = () => {
     getFormDataHeader();
   }, []);
 
+  //pegar imagem do drive
   const driveToDirectImage = (url) => {
     if (!url) return "";
 
@@ -33,7 +34,7 @@ const Gestoes = () => {
     return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
   };
 
-  // 🔥 ORDENA AS CHAPAS PELO ANO (MAIS ATUAL PRIMEIRO)
+//ordenar chapas por ano
   const sortedHeaders = [...dataFormHeader].sort(
     (a, b) => Number(b.Ano) - Number(a.Ano)
   );

@@ -4,15 +4,21 @@ import GeneralContainer from "../../Components/GeneralContainer/GeneralContainer
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
 import { AppContext } from "../../Context/AppContext";
+import Loading from "../../Components/Loading/Loading";
+import NotFoundCard from "../../Components/NotFoundCard/NotFoundCard";
+import { ClipboardList } from "lucide-react";
 
 const Estagios = () => {
   const { BASE_URL } = useContext(AppContext)
   const [estagios, setEstagios] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   const getEstagios = async () => {
     await axios
       .get(`${BASE_URL}/estagios`)
       .then((res) => setEstagios(res.data))
+      .finally(() => setLoading(false))
   };
 
   useEffect(() => {
@@ -27,7 +33,7 @@ const Estagios = () => {
         background={true}
       ></HeaderText>
       <div className="flex flex-wrap items-center justify-center gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        {estagios.length >= 0 ? (
+        {loading ? (<Loading></Loading>) : (estagios.length > 0 ) ? (
           estagios.map((estagio) => (
             <CardEstagios
               empresa={estagio.Empresa}
@@ -39,9 +45,7 @@ const Estagios = () => {
               linkedin={estagio.Linkedin}
             ></CardEstagios>
           ))
-        ) : (
-          <h1>Sem estágios publicados atualmente!</h1>
-        )}
+        ) : (<NotFoundCard text={"Sem estágios publicados no momento!"} icon={ClipboardList}></NotFoundCard>)}
       </div>
     </GeneralContainer>
   );

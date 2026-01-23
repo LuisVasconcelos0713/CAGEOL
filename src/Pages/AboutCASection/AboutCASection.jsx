@@ -4,14 +4,16 @@ import { motion } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AppContext } from "../../Context/AppContext";
+import Loading from "../../Components/Loading/Loading";
 
 
   const AboutCASection = () => {
     const {BASE_URL} = useContext(AppContext)
     const [data,setData] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const getData = async () => {
-      await axios.get(`${BASE_URL}/Home`).then((res) => setData(res.data))
+      await axios.get(`${BASE_URL}/Home`).then((res) => setData(res.data)).finally(() => setLoading(false))
     }
 
     useEffect(() => {
@@ -66,7 +68,7 @@ import { AppContext } from "../../Context/AppContext";
                 </div>
               </>
               ) : (
-              <p></p>
+              <Loading/>
               )}
             
           </motion.div>
