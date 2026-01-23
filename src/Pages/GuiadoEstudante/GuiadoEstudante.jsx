@@ -59,10 +59,13 @@ const GuiadoEstudante = () => {
         {/* MATRÍCULA */}
         <section id="matricula" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
           <h2 className="text-3xl font-bold text-[#5C4033] flex items-center gap-3">
-            <GraduationCap className="text-[#8B5E3C]" /> Conquistei minha vaga. Qual o próximo passo?
+            <div className="bg-stone-100 hidden sm:block p-3 h-fit rounded-xl">
+                  <GraduationCap className="text-[#8B5E3C]  w-6 h-6" />
+                </div>
+            <p className="text-2xl xsm:text-3xl">Conquistei minha vaga. Qual o próximo passo?</p>
           </h2>
 
-          <h3 className="text-2xl font-semibold text-stone-800">
+          <h3 className="text-xl xsm:text-2xl font-semibold text-stone-800">
             Matrícula
           </h3>
 
@@ -82,7 +85,7 @@ const GuiadoEstudante = () => {
 
         {/* SIGAA */}
         <section id="sigaa" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
-          <h3 className="text-3xl font-bold text-[#5C4033]">
+          <h3 className="text-2xl xsm:text-3xl font-bold text-[#5C4033]">
             SIGAA
           </h3>
 
