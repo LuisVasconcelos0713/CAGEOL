@@ -15,6 +15,16 @@ const SemanaDaGeologiaPage = () => {
         .then(res => setSemanasAnteriores(res.data))
         .then(console.log("Deu bom!"))
     }  
+    
+    const driveToDirectImage = (url) => {
+    if (!url) return "";
+
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return url;
+
+    const fileId = match[1];
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+  };
 
     useEffect(() => {
         getSemanasAnteriores()
@@ -65,9 +75,9 @@ const SemanaDaGeologiaPage = () => {
                   }`}
                 >
                   <img
-                    src={evento.ImagemUrl}
+                    src={driveToDirectImage(evento.ImagemUrl)}
                     alt={`Foto da Semana da Geologia de ${evento.Ano}`}
-                    className="rounded-lg shadow-2xl object-cover w-full h-[400px]"
+                    className="rounded-lg shadow-2xl object-cover w-full h-[454px]"
                   />
                 </div>
 
@@ -82,13 +92,23 @@ const SemanaDaGeologiaPage = () => {
                   <p className="text-[#584738] text-lg leading-relaxed mb-6">
                     {evento.Descricao}
                   </p>
-                  <a
-                    href="https://drive.google.com/drive/folders/1J2q-JrKQnrim1AavD5AQxY_R8oU5tDMW"
+
+                  <div className="flex gap-5">
+<a
+                    href="https://drive.google.com/drive/folders/1i3WICIAkeuvtTpxyj2UeqdOm8cBL_DBo?usp=sharing"
                     className="inline-flex items-center gap-2 bg-[#76461B] text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
                   >
                     <FiCamera />
                     Ver Galeria de Fotos
+                  </a><a
+                    href="https://drive.google.com/drive/folders/1J2q-JrKQnrim1AavD5AQxY_R8oU5tDMW"
+                    className="inline-flex items-center gap-2 bg-[#7a512c] text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
+                  >
+                    Ver mais
                   </a>
+                  </div>
+                  
+                  
                 </div>
               </div>
             </motion.div>

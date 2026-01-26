@@ -136,7 +136,7 @@ const NavbarItens = () => {
           }
           className="flex items-center gap-1 text-textPrimary hover:text-button transition-colors cursor-pointer"
         >
-          Transparencia
+          Transparência
           <FiChevronDown
             size={20}
             className={`transition-transform ${
