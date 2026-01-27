@@ -2,6 +2,9 @@ import { motion } from "framer-motion"
 import { Calendar, Clock, FileText } from "lucide-react"
 
 const CardAtas = ({ meeting, date, PDF_URL, endTime, startTime }) => {
+
+  if(!meeting) return (<span></span>)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -32,17 +35,17 @@ const CardAtas = ({ meeting, date, PDF_URL, endTime, startTime }) => {
       <div className="flex flex-col gap-2 text-sm text-gray-600">
         <div className="flex items-center gap-2">
           <Calendar size={16} />
-          <span>{date}</span>
+          <span className="flex items-center gap-1">{!date ? <p>Não informado</p> : date}</span>
         </div>
 
         <div className="flex items-center gap-2">
           <Clock size={16} />
-          <span>Início: {startTime}</span>
+          <span className="flex items-center gap-1">Início: {!startTime ? <p>Não informado</p> : startTime}</span>
         </div>
 
         <div className="flex items-center gap-2">
           <Clock size={16} />
-          <span>Fim: {endTime}</span>
+          <span className="flex items-center gap-1">Fim: {!endTime ? <p>Não informado</p> : endTime}</span>
         </div>
       </div>
 

@@ -1,7 +1,32 @@
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import { ArrowRight, Info, Bus, GraduationCap, MapPin, Mail, Wallet, Utensils } from "lucide-react"; // Opcional: ícones para dar vida ao design
+import { AppContext } from "../../Context/AppContext";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import Loading from "../../Components/Loading/Loading";
 
 const GuiadoEstudante = () => {
+
+  const { BASE_URL } = useContext(AppContext);
+  const [dataForm, setDataForm] = useState([]);
+  
+    const getFormData = async () => {
+      axios.get(`${BASE_URL}/GuiaDoEstudante`).then(res => setDataForm(res.data))
+    };
+  
+  
+    useEffect(() => {
+      getFormData();
+    }, []);
+
+    console.log(dataForm)
+
+    if(!dataForm || dataForm.length === 0){
+      return <Loading></Loading>
+    }
+
+    const guia = dataForm[0]
+
   return (
     <div className="w-full bg-[#FCF9F6]">
       <HeaderText
@@ -13,7 +38,7 @@ const GuiadoEstudante = () => {
       <main className="max-w-5xl mx-auto px-6 py-20 flex flex-col gap-24 text-stone-700">
 
         {/* INTRODUÇÃO */}
-        <section className="relative">
+         <section className="relative">
           <div className="absolute -left-4 top-0 w-1 h-full bg-[#8B5E3C] rounded-full hidden md:block" />
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">
@@ -24,12 +49,20 @@ const GuiadoEstudante = () => {
               <p>
                 Bem-vindo(a) ao curso de <strong>Geologia na UFG</strong>! Você agora faz parte de uma comunidade que explora a história e os mistérios do nosso planeta.
               </p>
-              <p>
-                As aulas começam no dia <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">06 de março</span>. Prepare-se para uma jornada de vivências práticas únicas e desafios intelectuais.
-              </p>
+             <p>
+              As aulas para os <strong>calouros</strong> têm início em{" "}
+              <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">
+                {guia.DataInicioCalouros}
+              </span>.
+              Já para os <strong>veteranos</strong>, o início do semestre acontece em{" "}
+              <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">
+                {guia.DataInicioVeteranos}
+              </span>.
+            </p>
             </div>
           </div>
-        </section>
+        </section> 
+       
 
         {/* SUMÁRIO */}
         <section className="border-l-4 border-[#8B5E3C] bg-stone-100 p-8 rounded-r-2xl shadow-sm">

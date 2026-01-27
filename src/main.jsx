@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./Pages/Home.jsx";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import NotFoundPage from "./Pages/NotFound/NotFound.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
@@ -18,6 +18,7 @@ import AtasdeReuniao from "./Pages/AtasdeReuniao/AtasdeReuniao.jsx";
 import InformesCurso from "./Pages/InformesCurso/InformesCurso.jsx";
 import FormularioCurso from "./Pages/FormularioCurso/FormularioCurso.jsx";
 import { AppProvider } from "./Context/AppProvider.jsx";
+import SemanaDaGeologiaInfo from "./Pages/SemanaDaGeologiaInfo/SemanaDaGeologiaInfo.jsx";
 
 
 createRoot(document.getElementById("root")).render(
@@ -34,6 +35,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/financeiro" element={<Financeiro />}></Route> {/* Transparencia */}
         <Route path="/atas-de-reuniao" element={<AtasdeReuniao />}></Route> {/* Transparencia */}
         <Route path="/semana-da-geologia" element={<SemanaDaGeologiaPage />}></Route> {/* Eventos */}
+        <Route path="/semana-da-geologia/:ano" element={<SemanaDaGeologiaInfo />}></Route> {/* Eventos */}
         <Route path="/eventos-escolares" element={<EventosEscolaresPage />}></Route> {/* Eventos */}
         <Route path="/estagios" element={<Estagios/>}></Route> {/* Informes */}
         <Route path="/informes-curso" element={<InformesCurso />}></Route> {/* Informes */}

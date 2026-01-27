@@ -20,6 +20,16 @@ import Loading from "../../Components/Loading/Loading";
       getData()
     },[])
 
+    const driveToDirectImage = (url) => {
+    if (!url) return "";
+
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return url;
+
+    const fileId = match[1];
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+  };
+
   return (
     <div>
       <section className="bg-backgroundPrimary py-20 lg:py-24">
@@ -61,7 +71,7 @@ import Loading from "../../Components/Loading/Loading";
               <>
                 <div className="flex justify-center">
                   <img
-                    src={data[0].Imagem}
+                    src={driveToDirectImage(data[0].Imagem)}
                     alt="Gestão atual do CAGEOL"
                     className="rounded-lg shadow-2xl object-cover w-full h-full max-h-[450px]"
                   />

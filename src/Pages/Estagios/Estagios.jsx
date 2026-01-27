@@ -25,6 +25,18 @@ const Estagios = () => {
     getEstagios();
   }, []);
 
+  const driveToDirectImage = (url) => {
+    if (!url) return "";
+
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return url;
+
+    const fileId = match[1];
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+  };
+
+  if(estagios === 0) return <Loading></Loading>
+
   return (
     <GeneralContainer>
       <HeaderText
@@ -40,7 +52,7 @@ const Estagios = () => {
               area={estagio.Area}
               descricao={estagio.Descricao}
               contato={estagio.Contato}
-              img={estagio.Img}
+              img={driveToDirectImage(estagio.Img)}
               instagram={estagio.Instagram}
               linkedin={estagio.Linkedin}
             ></CardEstagios>

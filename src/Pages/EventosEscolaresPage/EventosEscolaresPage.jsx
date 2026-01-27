@@ -19,6 +19,16 @@ const EventosEscolaresPage = () => {
     getEventosEscolaresData();
   }, []);
 
+  const driveToDirectImage = (url) => {
+    if (!url) return "";
+
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return url;
+
+    const fileId = match[1];
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+  };
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -87,7 +97,7 @@ const EventosEscolaresPage = () => {
                 >
                   <div className="overflow-hidden">
                     <img
-                      src={evento.ImagemUrl}
+                      src={driveToDirectImage(evento.ImagemUrl)}
                       alt={`Evento na ${evento.Local}`}
                       className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                     />

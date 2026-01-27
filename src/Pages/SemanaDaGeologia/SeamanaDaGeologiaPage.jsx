@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { FiCamera } from "react-icons/fi";
-import { motion } from "framer-motion"; // Importe o motion do framer-motion
+import { motion } from "framer-motion";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import axios from "axios";
 import { AppContext } from "../../Context/AppContext";
@@ -83,7 +83,7 @@ const SemanaDaGeologiaPage = () => {
 
                 {/* Coluna do Texto */}
                 <div className="text-left">
-                  <span className="text-sm font-bold text-[#76461B]">
+                  <span className="text-sm font-bold text-button">
                     {evento.Ano}
                   </span>
                   <h2 className="text-3xl font-bold text-[#442D1C] mt-1 mb-4">
@@ -94,18 +94,19 @@ const SemanaDaGeologiaPage = () => {
                   </p>
 
                   <div className="flex gap-5">
-<a
+                  <a
                     href="https://drive.google.com/drive/folders/1i3WICIAkeuvtTpxyj2UeqdOm8cBL_DBo?usp=sharing"
-                    className="inline-flex items-center gap-2 bg-[#76461B] text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    className="inline-flex items-center gap-2 bg-button text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
                   >
                     <FiCamera />
                     Ver Galeria de Fotos
-                  </a><a
-                    href="https://drive.google.com/drive/folders/1J2q-JrKQnrim1AavD5AQxY_R8oU5tDMW"
-                    className="inline-flex items-center gap-2 bg-[#7a512c] text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
+                  </a>
+                  <Link
+                    to={`/semana-da-geologia/${evento.Ano}`}
+                    className="inline-flex items-center gap-2 bg-button text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
                   >
                     Ver mais
-                  </a>
+                  </Link>
                   </div>
                   
                   

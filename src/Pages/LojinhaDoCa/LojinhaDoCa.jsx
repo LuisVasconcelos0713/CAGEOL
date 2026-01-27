@@ -28,6 +28,17 @@ const LojinhaDoCa = () => {
     getProducts();
   }, []);
 
+   const driveToDirectImage = (url) => {
+    if (!url) return "";
+
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return url;
+
+    const fileId = match[1];
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+  };
+
+
   return (
     <div className="bg-[#FDFCF9] min-h-screen pb-20">
       <HeaderText
@@ -58,7 +69,7 @@ const LojinhaDoCa = () => {
                 productName={product.Produto}
                 description={product.Descricao}
                 price={product.Preco}
-                imageUrl={product.ImagemUrl}
+                imageUrl={driveToDirectImage(product.ImagemUrl)}
                 whatsappNumber={VENDEDOR_WHATSAPP}
               />
             ))}
