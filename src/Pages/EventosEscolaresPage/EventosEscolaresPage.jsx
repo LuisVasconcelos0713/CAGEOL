@@ -12,7 +12,6 @@ const EventosEscolaresPage = () => {
     await axios
       .get(`${BASE_URL}/EventosEscolares`)
       .then((res) => setEventosEscolaresData(res.data))
-      .then(console.log("Deu certo"));
   };
 
   useEffect(() => {

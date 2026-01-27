@@ -13,7 +13,6 @@ const SemanaDaGeologiaPage = () => {
     const getSemanasAnteriores = async () => {
         await axios.get(`${BASE_URL}/SemanaDaGeo`)
         .then(res => setSemanasAnteriores(res.data))
-        .then(console.log("Deu bom!"))
     }  
     
     const driveToDirectImage = (url) => {

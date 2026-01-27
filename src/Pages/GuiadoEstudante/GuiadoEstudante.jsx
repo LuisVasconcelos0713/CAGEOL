@@ -19,8 +19,6 @@ const GuiadoEstudante = () => {
       getFormData();
     }, []);
 
-    console.log(dataForm)
-
     if(!dataForm || dataForm.length === 0){
       return <Loading></Loading>
     }

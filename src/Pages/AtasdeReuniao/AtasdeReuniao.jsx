@@ -21,8 +21,6 @@ const AtasdeReuniao = () => {
         getDataForm()
     },[])
     
-    console.log(dataForm)
-
     return(
         <div className="">
             <HeaderText title="Atas de reunião" subtitle="Econtre aqui todas as Atas de Reunião do CAGEOL!" background={true}></HeaderText>
