@@ -259,14 +259,14 @@ const GuiadoEstudante = () => {
                 <h5 className="font-bold text-[#DDB892] text-lg mb-4 border-b border-white/10 pb-2 flex items-center gap-2">
                   Horários de Saída
                 </h5>
-                <ul className="flex flex-col flex-wrap xxms:w-90  sml:h-40 gap-2 font-mono text-base">
-                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>07h19</span> <span>→ 07h55</span></li>
-                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>09h22</span> <span>→ 09h55</span></li>
-                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>11h42</span> <span>→ 12h10</span></li>
-                  <li className="flex justify-between border-b border-white/5 pb-1 sml:pr-5 gap-3"><span>12h37</span> <span>→ 13h05</span></li>
-                  <li className="flex justify-between border-b border-white/5 pb-1 gap-3"><span>14h21</span> <span>→ 15h10</span></li>
-                  <li className="flex justify-between border-b border-white/5 pb-1 gap-3"><span>16h38</span> <span>→ 17h10</span></li>
-                  <li className="flex justify-between border-b border-white/5 "><span>17h37</span> <span>→ 18h10</span></li>
+                <ul className="flex flex-col flex-wrap smd:h-40 gap-2 font-mono text-base">
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 smd:pr-3 gap-3"><span>07h19</span> <span>→ 07h55</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 smd:pr-3 gap-3"><span>09h22</span> <span>→ 09h55</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 smd:pr-3 gap-3"><span>11h42</span> <span>→ 12h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 gap-3 smd:pr-3"><span>12h37</span> <span>→ 13h05</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 gap-3"><span>14h21</span> <span>→ 15h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 pb-1 xsml:pr-5 gap-3"><span>16h38</span> <span>→ 17h10</span></li>
+                  <li className="flex justify-between border-b border-white/5 xsml:pr-5  "><span>17h37</span> <span>→ 18h10</span></li>
                 </ul>
               </div>
               
