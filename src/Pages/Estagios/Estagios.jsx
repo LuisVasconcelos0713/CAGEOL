@@ -35,8 +35,6 @@ const Estagios = () => {
     return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
   };
 
-  if(estagios === 0) return <Loading></Loading>
-
   return (
     <GeneralContainer>
       <HeaderText
