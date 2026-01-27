@@ -47,16 +47,28 @@ const GuiadoEstudante = () => {
               <p>
                 Bem-vindo(a) ao curso de <strong>Geologia na UFG</strong>! Você agora faz parte de uma comunidade que explora a história e os mistérios do nosso planeta.
               </p>
-             <p>
-              As aulas para os <strong>calouros</strong> têm início em{" "}
+              {guia.DataInicioVeteranos ? 
+              <p>
+              Este guia foi feito para te acompanhar nos primeiros passos na universidade e no curso de Geologia. As aulas para os <strong>calouros</strong> têm início em{" "}
               <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">
                 {guia.DataInicioCalouros}
               </span>.
-              Já para os <strong>veteranos</strong>, o início do semestre acontece em{" "}
+              enquanto os <strong>veteranos</strong> iniciam o semestre em{" "}
               <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">
                 {guia.DataInicioVeteranos}
               </span>.
+              dando início a mais uma etapa cheia de aprendizados e vivências práticas.
             </p>
+            : <p className="text-lg leading-relaxed">
+              Este guia foi feito para te acompanhar nos primeiros passos na universidade e no curso de Geologia. 
+              As aulas começam no dia {" "}
+              <span className="text-[#8B5E3C] font-bold underline decoration-wavy underline-offset-4">
+                {guia.DataInicioCalouros}
+              </span>, dando início a uma jornada cheia de descobertas, 
+              desafios e experiências práticas que vão marcar sua trajetória acadêmica.
+              </p>
+              }
+             
             </div>
           </div>
         </section> 
