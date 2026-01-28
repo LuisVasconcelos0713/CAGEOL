@@ -43,7 +43,7 @@ const Gestoes = () => {
     <div>
       <HeaderText
         title="Gestões"
-        subtitle="Econtre aqui todas as Gestões do CAGEOL!"
+        subtitle="Encontre aqui todas as Gestões do CAGEOL!"
         background={true}
       />
 
