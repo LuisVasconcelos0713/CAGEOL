@@ -27,7 +27,7 @@ const InformesCurso = () => {
             <HeaderText title="Informes Curso" subtitle="Encontre aqui todo os informes dos cursos necessário do CAGEOL!" background={true}></HeaderText>
             {loading ? <Loading></Loading> : dataForm.length > 0 ? 
             dataForm.map((data) => (
-                <main className="max-w-5xl mx-auto px-6 py-20 flex flex-col gap-24 text-stone-700">
+                <main className="max-w-5xl mx-auto px-6 my-20 flex flex-col gap-24 text-stone-700">
                 <section id="sigaa" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
                     <h3 className="text-2xl xsm:text-3xl font-bold text-[#5C4033]">
                         {data.Titulo}
