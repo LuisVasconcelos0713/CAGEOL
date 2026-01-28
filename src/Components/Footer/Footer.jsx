@@ -61,9 +61,11 @@ const Footer = () => {
                 <FaWhatsapp className="mr-3 text-button" size={20} />
                 <span>(62) 99807-2555</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-start">
+                <div className="hidden sm:block">
                 <MdRoom className='text-xl mr-3 text-button'/>
-                <span>Espaço estudantil, sala 02</span>
+                </div>
+                <span>Estrada Municipal, Quadra e Área Lote 04 - Bairro Fazenda Santo Antônio CEP:, Aparecida de Goiânia - GO, 74971-451 - Espaço estudantil sala 02</span>
               </li>
             </ul>
           </div>

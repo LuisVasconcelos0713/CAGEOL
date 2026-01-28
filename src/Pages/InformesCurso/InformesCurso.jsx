@@ -1,4 +1,4 @@
-import { FileX2} from "lucide-react";
+import { Calendar, FileX2} from "lucide-react";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../Context/AppContext";
@@ -29,10 +29,16 @@ const InformesCurso = () => {
             dataForm.map((data) => (
                 <main className="max-w-5xl mx-auto px-6 my-20 flex flex-col gap-24 text-stone-700">
                 <section id="sigaa" className="flex flex-col gap-6 bg-white p-10 rounded-[2rem] border border-stone-200 shadow-sm">
-                    <h3 className="text-2xl xsm:text-3xl font-bold text-[#5C4033]">
+                    
+                    <div className="flex items-start gap-2 flex-col">
+                        <h3 className="text-2xl xsm:text-3xl font-bold text-[#5C4033]">
                         {data.Titulo}
                     </h3>
-
+                    <div className="flex flex-row items-center gap-2">
+                        <Calendar size={16} />
+                        <span className="flex items-center gap-1">{!data.DataPublicacao ? <p>Data da publicação: Não informado</p> : `Data da publicação: ${data.DataPublicacao}`}</span>
+                    </div>
+                       </div>
                     <div className="flex flex-col gap-4 text-lg leading-relaxed">
                         <p>
                             {data.Descricao}
