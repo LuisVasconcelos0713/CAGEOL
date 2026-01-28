@@ -5,6 +5,7 @@ import { AppContext } from "../../Context/AppContext";
 import axios from "axios";
 import Loading from "../../Components/Loading/Loading";
 import NotFoundCard from "../../Components/NotFoundCard/NotFoundCard";
+import { Link } from "react-router";
 
 const InformesCurso = () => {
 
@@ -39,14 +40,12 @@ const InformesCurso = () => {
                         {!data.InfoImportante ? <span></span> : <p className="bg-[#DDB892]/20 p-4 rounded-xl border-l-4 border-[#DDB892]">{data.InfoImportante}</p>}
                     </div>
 
-                    <a
-                        href={`${data.Link}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link
+                        to={data.Link}
                         className="w-fit px-8 py-3 bg-[#8B5E3C] text-white font-bold rounded-full hover:bg-[#5C4033] transition-colors shadow-md"
                     >
                         {data.TituloBotao}
-                    </a>
+                    </Link>
                 </section>
             </main>
             ))
