@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import HeaderText from "../../Components/HeaderText/HeaderText";
 import { motion } from "framer-motion";
 import { AppContext } from "../../Context/AppContext";
+import { FiCamera } from "react-icons/fi";
 
 const EventosEscolaresPage = () => {
   const { BASE_URL } = useContext(AppContext)
@@ -76,8 +77,7 @@ const EventosEscolaresPage = () => {
               <p className="text-lg text-[#584738] leading-relaxed">
                 O CAGEOL acredita na importância da extensão universitária. Por
                 isso, realizamos visitas, palestras e oficinas em escolas de
-                Goiânia e região, com o objetivo de popularizar a ciência
-                geológica e despertar a curiosidade dos jovens estudantes.
+                Goiânia e região, com o objetivo de popularizar a geologia e despertar a curiosidade dos jovens estudantes.
               </p>
             </motion.div>
 
@@ -108,9 +108,16 @@ const EventosEscolaresPage = () => {
                     <h3 className="text-xl font-bold text-[#442D1C] mb-2">
                       {evento.Local}
                     </h3>
-                    <p className="text-[#584738] flex-grow">
-                      {evento.Descricao}
-                    </p>
+                    
+                     <div className="flex h-full w-full items-end justify-center">
+                      <a
+                      href={evento.LinkDriveFotos}
+                      className="inline-flex items-center gap-2 bg-button text-white font-semibold py-3 px-6  w-full justify-center rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105"
+                      >
+                      <FiCamera />
+                      Ver Galeria de Fotos
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
               ))}
