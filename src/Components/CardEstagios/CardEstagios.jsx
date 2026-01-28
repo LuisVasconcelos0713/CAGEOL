@@ -53,7 +53,7 @@ const CardEstagios = ({ empresa, area, descricao, contato, img, instagram, linke
       <motion.a
       whileHover={{scale: 1.05}}
       whileTap={{scale: 0.95}}
-      href={`${instagram}`}
+      href={`${linkedin}`}
       className=''
       >
         <FaLinkedin size={30} /> 
