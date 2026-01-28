@@ -119,10 +119,6 @@ const SemanaDaGeologiaInfo = () => {
                                            className="p-4 hover:bg-stone-50 text-stone-700 text-sm border-b border-stone-100 flex justify-between items-center">
                                             Template do Resumo <FiExternalLink className="text-stone-300"/>
                                         </a>
-                                        <a href={evento.PDFFormularioDeSubmissao} target="_blank" rel="noreferrer" 
-                                           className="p-4 hover:bg-stone-50 text-stone-700 text-sm flex justify-between items-center">
-                                            Formulário de Submissão <FiExternalLink className="text-stone-300"/>
-                                        </a>
                                     </div>
                                 )}
                             </div>
