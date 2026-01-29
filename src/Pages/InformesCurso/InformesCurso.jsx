@@ -24,7 +24,7 @@ const InformesCurso = () => {
 
     return(
         <div className="">
-            <HeaderText title="Informes Curso" subtitle="Encontre aqui todo os informes dos cursos necessário do CAGEOL!" background={true}></HeaderText>
+            <HeaderText title="Informes Curso" subtitle="Encontre aqui as notícias do CAGEOL!" background={true}></HeaderText>
             {loading ? <Loading></Loading> : dataForm.length > 0 ? 
             dataForm.map((data) => (
                 <main className="max-w-5xl mx-auto px-6 my-20 flex flex-col gap-24 text-stone-700">
